@@ -69,7 +69,7 @@ displayFaceBox = (box) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3001/imageURL', {
+    fetch('https://enigmatic-beyond-50588.herokuapp.com/imageURL', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -79,7 +79,7 @@ onButtonSubmit = () => {
       .then(response => response.json())
   .then(response => {
     if (response) {
-      fetch('http://localhost:3001/image', {
+      fetch('https://enigmatic-beyond-50588.herokuapp.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
